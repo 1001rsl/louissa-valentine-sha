@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Valentine’s</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="scene">
+
+    <!-- LEFT IMAGE -->
+    <div class="side">
+      <img src="1.jpg" class="floating-photo" alt="Memory 1">
+    </div>
+
+    <!-- CENTER CARD -->
+    <div class="happy-valentines">
+      <div class="valentines-day-card">
+        <div class="hearts">
+          <div class="heart" style="left:-30px; animation-delay:0s;"></div>
+          <div class="heart" style="left:0; animation-delay:1s;"></div>
+          <div class="heart" style="left:30px; animation-delay:2s;"></div>
+        </div>
+
+        <div class="text" onclick="showLove()">
+          Happy Valentine’s <br> Day 💕
+        </div>
+
+        <div class="message" id="loveMessage">
+          Can I be your valentine? 🌹
+          <!-- Valentine Buttons -->
+            <div class="valentine-buttons">
+            <button id="yesBtn">Yes 💖</button>
+            <button id="noBtn">No ❌</button>
+            </div>
+             <!-- ACTIVITIES -->
+<div class="activities">
+  <h2>💌 Our Valentine’s Day Plan 💌</h2>
+  <div class="activity-heart">🍕 Lunch @ Pizzulu</div>
+  <div class="activity-heart">📸 Photobooth @ Powerplant</div>
+  <div class="activity-heart">🎨 Painting @ Powerplant</div>
+  <div class="activity-heart">☕ Coffee @ Harlan + Holden</div>
+</div>
+
+        </div>
+        
+      </div>
+
+      <p class="hover">– click the message –</p>
+    </div>
+
+   
+
+    <!-- RIGHT IMAGE -->
+    <div class="side">
+      <img src="2.jpg" class="floating-photo" alt="Memory 2">
+    </div>
+
+     <!-- Background Music -->
+<audio id="bgMusic" loop autoplay>
+  <source src="audio.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- Music Controls -->
+<div class="music-controls">
+  <button id="musicToggle">Pause Music 🎵</button>
+</div>
+
+  </div>
+
+  <script>
+    function showLove() {
+      document.getElementById('loveMessage').classList.toggle('show');
+    }
+
+    // Yes button click
+    document.getElementById('yesBtn').addEventListener('click', () => {
+    alert("Yay! 💖 You said yes!");
+    });
+
+    // No button behavior
+    const noBtn = document.getElementById('noBtn');
+
+    noBtn.addEventListener('mouseenter', () => {
+    noBtn.textContent = 'Yes 💖';   // Change text on hover
+    noBtn.classList.add('hovered'); // Apply hover style
+    });
+
+    noBtn.addEventListener('mouseleave', () => {
+    noBtn.textContent = 'No ❌';    // Optional: revert text when mouse leaves
+    noBtn.classList.remove('hovered');
+    });
+
+    // On click, trigger Yes button
+    noBtn.addEventListener('click', () => {
+    document.getElementById('yesBtn').click();
+    });
+
+  </script>
+
+  <script>
+const music = document.getElementById('bgMusic');
+const musicBtn = document.getElementById('musicToggle');
+
+musicBtn.addEventListener('click', () => {
+  if (music.paused) {
+    music.play();
+    musicBtn.textContent = "Pause Music 🎵";
+  } else {
+    music.pause();
+    musicBtn.textContent = "Play Music 🎶";
+  }
+});
+</script>
+
+  
+</body>
+ 
+</html>
