@@ -272,20 +272,93 @@ body {
   50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-/* MOBILE RESPONSIVE */
+/* =========================
+   MOBILE RESPONSIVE STYLES
+   ========================= */
 @media (max-width: 768px) {
-  .activities {
-    margin-top: 20px;
-    gap: 10px;
+
+  body {
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  /* Stack everything vertically */
+  .scene {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  /* Center side images */
+  .side {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .floating-photo {
+    width: 70%;
+    max-width: 260px;
+  }
+
+  /* Valentine card sizing */
+  .valentines-day-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 30px 25px;
+  }
+
+  /* Main title text */
+  .text {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+
+  /* Message content */
+  .message {
+    font-size: 1rem;
+  }
+
+  /* Buttons */
+  .valentine-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+  .valentine-buttons button {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    width: 100%;
+  }
+
+  /* Activities section */
+  .activities h2 {
+    font-size: 1.2rem;
   }
 
   .activity-heart {
-    font-size: 0.9rem;
-    padding: 10px 20px;
+    font-size: 0.95rem;
+    padding: 10px 14px;
   }
 
-  .activities h2 {
-    font-size: 1.5rem;
+  /* Hover hint */
+  .hover {
+    font-size: 0.9rem;
+  }
+
+  /* Music button */
+  .music-controls {
+    bottom: 15px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .music-controls button {
+    font-size: 1rem;
+    padding: 14px 22px;
+    border-radius: 30px;
   }
 }
 

@@ -24,12 +24,11 @@
           <div class="heart" style="left:30px; animation-delay:2s;"></div>
         </div>
 
-        <div class="text" onclick="showLove()">
+        <div class="text" id="mainText" onclick="toggleValentine()">
           Happy Valentine’s <br> Day 💕
         </div>
 
         <div class="message" id="loveMessage">
-          Can I be your valentine? 🌹
           <!-- Valentine Buttons -->
             <div class="valentine-buttons">
             <button id="yesBtn">Yes 💖</button>
@@ -113,6 +112,23 @@ musicBtn.addEventListener('click', () => {
     musicBtn.textContent = "Play Music 🎶";
   }
 });
+
+let changed = false;
+
+function toggleValentine() {
+  const text = document.getElementById('mainText');
+  const message = document.getElementById('loveMessage');
+
+  if (!changed) {
+    text.innerHTML = "Can I be <br> Your Valentine? 💌";
+    message.classList.add('show');
+    changed = true;
+  } else {
+    text.innerHTML = "Happy Valentine’s <br> Day 💕";
+    message.classList.remove('show');
+    changed = false;
+  }
+}
 </script>
 
   
