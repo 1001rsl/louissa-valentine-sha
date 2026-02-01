@@ -170,9 +170,12 @@ body {
     max-width: 360px;
   }
 
-  .music-controls {
-    right: 50%;
-    transform: translateX(50%);
+   .music-controls {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    z-index: 20;
   }
 
 }
