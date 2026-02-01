@@ -21,11 +21,22 @@ body {
 
 .valentines-day-card {
   background: #fff;
-  padding: 40px 50px;
   border-radius: 25px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  animation: float 4s ease-in-out infinite;
+  padding: 40px 50px;
+
+  /* Height control */
+  min-height: 100px;        /* make sure initial text fits */
+  max-height: 200px;        /* initial collapsed max-height */
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
 }
+
+.valentines-day-card.expanded {
+  max-height: 1000px;      /* large enough to fit full content */
+  padding: 40px 50px;      /* same padding, optional to increase slightly */
+}
+
 
 @keyframes float {
   0%,100% { transform: translateY(0); }

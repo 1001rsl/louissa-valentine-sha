@@ -117,17 +117,21 @@ let changed = false;
 function toggleValentine() {
   const text = document.getElementById('mainText');
   const message = document.getElementById('loveMessage');
+  const card = document.querySelector('.valentines-day-card');
 
   if (!changed) {
     text.innerHTML = "Can I be <br> Your Valentine? 💌";
     message.classList.add('show');
+    card.classList.add('expanded');   // expand the card
     changed = true;
   } else {
     text.innerHTML = "Happy Valentine’s <br> Day 💕";
     message.classList.remove('show');
+    card.classList.remove('expanded'); // collapse the card
     changed = false;
   }
 }
+
 </script>
 
   
