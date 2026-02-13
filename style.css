@@ -121,6 +121,28 @@ body {
   }
 }
 
+.sweet-message-btn {
+  margin-top: 25px;
+}
+
+.sweet-message-btn button {
+  background: linear-gradient(135deg, #ff4d6d, #ff758f);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sweet-message-btn button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
 .hover {
   margin-top: 15px;
   font-size: 0.85rem;
